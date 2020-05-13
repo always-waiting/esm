@@ -73,11 +73,11 @@ config:
 	@echo "get Dependencies"
 	go env
 	go get gopkg.in/cheggaaa/pb.v1
-	go get github.com/jessevdk/go-flags
+	go get -pkgdir /tmp/pkg github.com/jessevdk/go-flags
 	go get github.com/olekukonko/ts
-	go get github.com/cihub/seelog
-	go get github.com/parnurzeal/gorequest
-	go get github.com/mattn/go-isatty
+	go get -pkgdir /tmp/pkg github.com/cihub/seelog
+	go get -pkgdir /tmp/pkg github.com/parnurzeal/gorequest
+	go get -pkgdir /tmp/pkg github.com/mattn/go-isatty
 
 dist: cross-build package
 
